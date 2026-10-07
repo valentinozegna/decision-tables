@@ -1,0 +1,12 @@
+{
+  "name": "decision-tables",
+  "version": "1.0.0",
+  "description": "Find every edge case of a feature with an exhaustive decision table, get a human ruling on each uncertain cell, then minimize it into a short verified rule list.",
+  "author": {
+    "name": "Valentino Zegna",
+    "url": "https://github.com/valentinozegna"
+  },
+  "homepage": "https://github.com/valentinozegna/decision-tables",
+  "license": "MIT",
+  "keywords": ["decision-table", "truth-table", "edge-cases", "specification", "testing"]
+}
