@@ -29,11 +29,11 @@ python3 $T selftest
 
 ## Who decides what
 
-Claude does the combinatorial work: enumerating, drafting, minimizing,
-verifying. The user owns every product decision. A cell whose outcome Claude
+You do the combinatorial work: enumerating, drafting, minimizing,
+verifying. The user owns every product decision. A cell whose outcome you
 inferred with any doubt gets `status = flag` and a question in `note`; the
-user answers it and the cell becomes `decided`. Claude presents flagged
-regions with a recommendation and waits for the answer.
+user answers it and the cell becomes `decided`. Present flagged regions with
+a recommendation and wait for the answer.
 
 ## The files
 
@@ -51,7 +51,7 @@ Cell fields:
   `n/a` marks a combination that cannot occur; it is a don't-care.
 - `next`: the resulting state, a value of the `state` dimension, or `same`.
   Empty when the spec has no `state`.
-- `status`: `todo` (empty cell), `draft` (Claude is confident and cites
+- `status`: `todo` (empty cell), `draft` (you are confident and cite
   evidence), `flag` (needs the user), `decided` (the user ruled).
 - `note`: evidence as `file:line` for a draft, the question for a flag, the
   reason for an `n/a`.
@@ -88,7 +88,7 @@ Flag a cell when any of these holds:
   notification, a state with no way out).
 - The code has no answer, or the answer is an accident of ordering.
 - The answer in the code looks deliberate but surprising to a user.
-- Claude would have to guess the product intent.
+- You would have to guess the product intent.
 
 Prove a suspected defect before flagging it as one: a temporary test against
 the real function, run and then deleted. Put

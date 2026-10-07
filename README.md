@@ -1,10 +1,10 @@
 # decision-tables
 
-A Claude Code skill that finds every edge case of a feature. Claude enumerates the
-feature's conditions into an exhaustive decision table, asks you to rule on each
-uncertain cell, then minimizes the finished table into a short ordered rule list
-and verifies it cell by cell. Diffing two tables gives the behavior changelog and
-the test plan.
+An agent skill for Claude Code and Codex that finds every edge case of a feature.
+The agent enumerates the feature's conditions into an exhaustive decision table,
+asks you to rule on each uncertain cell, then minimizes the finished table into a
+short ordered rule list and verifies it cell by cell. Diffing two tables gives the
+behavior changelog and the test plan.
 
 `skills/decision-tables/table.py` does the combinatorial work (standard library only):
 `expand`, `check`, `minimize`, `verify`, `diff`, `selftest`.
