@@ -11,9 +11,18 @@ the test plan.
 
 ## Install
 
+Claude Code:
+
 ```
 /plugin marketplace add valentinozegna/decision-tables
 /plugin install decision-tables@decision-tables
+```
+
+Codex:
+
+```
+codex plugin marketplace add valentinozegna/decision-tables
+codex plugin add decision-tables@decision-tables
 ```
 
 To install it for everyone who clones a project, add this to the project's
@@ -30,4 +39,15 @@ To install it for everyone who clones a project, add this to the project's
 }
 ```
 
-Then ask Claude for a "decision table", "truth table" or "edge cases" of a feature.
+and this to the project's `.codex/config.toml`:
+
+```toml
+[marketplaces.decision-tables]
+source_type = "git"
+source = "https://github.com/valentinozegna/decision-tables.git"
+
+[plugins."decision-tables@decision-tables"]
+enabled = true
+```
+
+Then ask the agent for a "decision table", "truth table" or "edge cases" of a feature.

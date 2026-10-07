@@ -1,0 +1,20 @@
+{
+  "name": "decision-tables",
+  "interface": {
+    "displayName": "Decision Tables"
+  },
+  "plugins": [
+    {
+      "name": "decision-tables",
+      "source": {
+        "source": "local",
+        "path": "./"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}
