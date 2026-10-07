@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "decision-tables",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Find every edge case of a feature with an exhaustive decision table, get a human ruling on each uncertain cell, then minimize it into a short verified rule list.",
   "author": {
     "name": "Valentino Zegna",

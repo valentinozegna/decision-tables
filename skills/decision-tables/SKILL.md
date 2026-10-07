@@ -150,3 +150,23 @@ the PR and the list of cases to test. Get `old.csv` from git:
 ```bash
 git show main:docs/decision-tables/<feature>/<name>.csv > /tmp/old.csv
 ```
+
+### 8. Attach the table to the PR
+
+Every PR that adds or changes logic covered by a table includes the table
+evidence in its description. Paste the command output in fenced code blocks.
+
+- **New feature:** link the golden table and its `rules.md`, and paste the
+  `verify` output (zero mismatches).
+- **Behavior change:** paste the `diff` output against `main` and the `verify`
+  output. List each changed cell that the user decided, with the decision.
+- **Refactor:** paste the `diff` output against `main`, which must report no
+  changed cells, and the `verify` output. Run the test that replays the golden
+  CSV against the code and paste its result. These three together show the
+  refactor kept the behavior.
+- **Bug fix:** paste the reproduction (the failing input and the wrong
+  outcome), the cell that covers it, and its correct outcome. If no cell covers
+  the bug, the table is missing a dimension or a value: add it, adjudicate the
+  new cells, and treat the PR as a behavior change.
+
+A reviewer checks the PR against the pasted output, so paste it unedited.
